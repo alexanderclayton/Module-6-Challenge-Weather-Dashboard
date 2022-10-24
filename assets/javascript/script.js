@@ -4,6 +4,8 @@ var cityInput = document.getElementById("input");
 
 var recentSearch = document.getElementById("recent-searches");
 
+//var weatherSection = document.getElementsByClassName("hidden");
+
 var cityName = document.getElementById("city-name");
 var cityTemp = document.getElementById("city-temp");
 var cityWind = document.getElementById("city-wind");
@@ -16,11 +18,6 @@ var fiveDayPull = document.getElementById("5-day-pull");
 //var cityLongitude = value1;
 
 var cityCoordinatesURL = ('http://api.openweathermap.org/geo/1.0/direct?q=' + cityInput.value + '&limit=5&appid=aa5a9bd886dab3a65130eaa89476e34e')
-
-var cityWeatherURL = ('https://api.openweathermap.org/data/2.5/weather?lat=cityLattitude&lon=cityLongitude&appid=aa5a9bd886dab3a65130eaa89476e34e')
-
-var fiveDayPullURL = ('https://api.openweathermap.org/data/2.5/forecast?lat=cityLattitude&lon=cityLongitude&appid=aa5a9bd886dab3a65130eaa89476e34e')
-
 
 function testFunction() {
 
@@ -43,13 +40,11 @@ function testFunction() {
                         return response.json();
                     })
                     .then(function (data) {
-                        var temp = data.main.temp;
-                        var wind = data.wind.speed;
-                        var humidity = data.main.humidity;
-
-                        cityTemp.innerHTML = temp;
-                        cityWind.innerHTML = wind;
-                        cityHumidity.innerHTML = humidity
+                        var weatherSection = document.getElementById("weather-section");
+                        weatherSection.classList.remove("hidden");
+                        cityTemp.innerHTML = "Temp: " + (((data.main.temp) - 273.15) * 9/5 + 32).toFixed(1) + "°F";
+                        cityWind.innerHTML = "Wind: " + data.wind.speed + "MPH";
+                        cityHumidity.innerHTML = "Humidity: " + data.main.humidity + "%";
                     })
             }
 
@@ -63,41 +58,49 @@ function testFunction() {
                     var dayOneDate = document.getElementById("day-one-date");
                     dayOneDate.innerHTML = data.list[2].dt_txt;
                     var dayOneTemp = document.getElementById("day-one-temp");
-                    dayOneTemp.innerHTML = data.list[2].main.temp;
+                    dayOneTemp.innerHTML = "Temp: " + (((data.list[2].main.temp - 273.15) * 9/5 + 32).toFixed(1) + "°F");
                     var dayOneWind = document.getElementById("day-one-wind");
-                    dayOneWind.innerHTML = data.list[2].wind.speed;
+                    dayOneWind.innerHTML = "Wind: " + data.list[2].wind.speed + "MPH";
                     var dayOneHumidity = document.getElementById("day-one-humidity");
-                    dayOneHumidity.innerHTML = data.list[2].main.humidity
+                    dayOneHumidity.innerHTML = "Humidity: " + data.list[2].main.humidity + "%";
 
                     var dayTwoDate = document.getElementById("day-two-date");
                     dayTwoDate.innerHTML = data.list[10].dt_txt;
                     var dayTwoTemp = document.getElementById("day-two-temp");
-                    dayTwoTemp.innerHTML = data.list[10].main.temp;
+                    dayTwoTemp.innerHTML = "Temp: " + (((data.list[10].main.temp - 273.15) * 9/5 + 32).toFixed(1) + "°F");
                     var dayTwoWind = document.getElementById("day-two-wind");
-                    dayTwoWind.innerHTML = data.list[10].wind.speed;
+                    dayTwoWind.innerHTML = "Wind: " + data.list[10].wind.speed + "MPH";
                     var dayTwoHumidity = document.getElementById("day-two-humidity");
-                    dayTwoHumidity.innerHTML = data.list[10].main.humidity
+                    dayTwoHumidity.innerHTML = "Humidity: " + data.list[10].main.humidity + "%";
 
                     var dayThreeDate = document.getElementById("day-three-date");
                     dayThreeDate.innerHTML = data.list[18].dt_txt;
                     var dayThreeTemp = document.getElementById("day-three-temp");
-                    dayThreeTemp.innerHTML = data.list[18].main.temp;
+                    dayThreeTemp.innerHTML = "Temp: " + (((data.list[18].main.temp - 273.15) * 9/5 + 32).toFixed(1) + "°F");
                     var dayThreeWind = document.getElementById("day-three-wind");
-                    dayThreeWind.innerHTML = data.list[18].wind.speed;
+                    dayThreeWind.innerHTML = "Wind: " + data.list[18].wind.speed + "MPH";
                     var dayThreeHumidity = document.getElementById("day-three-humidity");
-                    dayThreeHumidity.innerHTML = data.list[18].main.humidity
+                    dayThreeHumidity.innerHTML = "Humidity: " + data.list[18].main.humidity + "%";
 
                     var dayFourDate = document.getElementById("day-four-date");
                     dayFourDate.innerHTML = data.list[26].dt_txt;
                     var dayFourTemp = document.getElementById("day-four-temp");
-                    dayFourTemp.innerHTML = data.list[26].main.temp;
+                    dayFourTemp.innerHTML = "Temp: " + (((data.list[26].main.temp - 273.15) * 9/5 + 32).toFixed(1) + "°F");
                     var dayFourWind = document.getElementById("day-four-wind");
-                    dayFourWind.innerHTML = data.list[26].wind.speed;
+                    dayFourWind.innerHTML = "Wind: " + data.list[26].wind.speed + "MPH";
                     var dayFourHumidity = document.getElementById("day-four-humidity");
-                    dayFourHumidity.innerHTML = data.list[26].main.humidity
+                    dayFourHumidity.innerHTML = "Humidity: " + data.list[26].main.humidity + "%";
+
+                    var dayFiveDate = document.getElementById("day-five-date");
+                    dayFiveDate.innerHTML = data.list[34].dt_txt;
+                    var dayFiveTemp = document.getElementById("day-five-temp");
+                    dayFiveTemp.innerHTML = "Temp: " + (((data.list[34].main.temp - 273.15) * 9/5 + 32).toFixed(1) + "°F");
+                    var dayFiveWind = document.getElementById("day-five-wind");
+                    dayFiveWind.innerHTML = "Wind: " + data.list[34].wind.speed + "MPH";
+                    var dayFiveHumidity = document.getElementById("day-five-humidity");
+                    dayFiveHumidity.innerHTML = "Humidity: " + data.list[34].main.humidity + "%";
                 })
-                })
-            }
+                }
 
             cityWeather();
             fiveDay();

@@ -58,10 +58,17 @@ main {
 }
 
 #weather-section {
-    border: solid black;
     width: 75;
     height: 100%;
     margin: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#city-weather {
+    border: solid 1px var(--grey);
 }
 
 #five-day-pull {
@@ -69,22 +76,9 @@ main {
     flex-direction: row;
 }
 
-#day-one {
+.weather-card {
     margin: 1rem;
-}
-
-#day-two {
-    margin: 1rem;
-}
-
-#day-three {
-    margin: 1rem;
-}
-
-#day-four {
-    margin: 1rem;
-}
-
-#day-five {
-    margin: 1rem;
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 1em;
 }
