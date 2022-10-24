@@ -3,6 +3,7 @@
     --purple: rgb(35, 0, 99);
     --dark-blue: rgb(0, 40, 58);
     --white: white;
+    --grey: grey;
 }
 
 body {
@@ -29,15 +30,61 @@ main {
 }
 
 #city-search {
-    border: solid black;
+    /*border: solid black;*/
     width: 25%;
     height: 100%;
     margin: 1rem;
 }
 
+#input {
+    width: 98%;
+    line-height: 2rem;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#search-button {
+    width: 100%;
+    background-color: var(--blue);
+    color: var(--white);
+    line-height: 2rem;
+    border-radius: 10px;
+    margin: 5px;
+    margin-bottom: 1rem;
+}
+
+#search-button:hover {
+    cursor: pointer;
+}
+
 #weather-section {
     border: solid black;
-    width: 75%;
+    width: 75;
     height: 100%;
+    margin: 1rem;
+}
+
+#five-day-pull {
+    display: flex;
+    flex-direction: row;
+}
+
+#day-one {
+    margin: 1rem;
+}
+
+#day-two {
+    margin: 1rem;
+}
+
+#day-three {
+    margin: 1rem;
+}
+
+#day-four {
+    margin: 1rem;
+}
+
+#day-five {
     margin: 1rem;
 }
