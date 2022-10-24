@@ -1,0 +1,43 @@
+:root {
+    --blue: rgb(0, 140, 255);
+    --purple: rgb(35, 0, 99);
+    --dark-blue: rgb(0, 40, 58);
+    --white: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, var(--blue), var(--purple));
+    color: var(--white);
+    font-weight: bolder;
+    font-size: 2rem;
+    height: 3.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10%;
+    
+}
+
+#city-search {
+    border: solid black;
+    width: 25%;
+    height: 100%;
+    margin: 1rem;
+}
+
+#weather-section {
+    border: solid black;
+    width: 75%;
+    height: 100%;
+    margin: 1rem;
+}
