@@ -53,6 +53,16 @@ main {
     margin-bottom: 1rem;
 }
 
+.recent-search-button {
+    width: 100%;
+    background-color: var(--grey);
+    color: var(--white);
+    line-height: 2rem;
+    border-radius: 10px;
+    margin: 5px;
+    margin-bottom: 1rem;
+}
+
 #search-button:hover {
     cursor: pointer;
 }
@@ -72,16 +82,32 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
+    
+}
+
+#city-weather-data-a {
+    padding: 10px 20px;
+}
+
+#city-weather-data-b {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: initial;
+    margin-top: -25px;
+    font-weight: bolder;
+    font-size: 1.5rem;
 }
 
 #city-weather-image {
-    width: 15%;
-    height: 50%;
+    width: 150px;
+    height: 150px;
 }
 
 #five-day-pull {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .weather-card {
@@ -90,4 +116,21 @@ main {
     color: var(--white);
     padding: 1em;
     border-radius: 20px;
+}
+
+#recent-searches {
+    border-top: solid var(--grey);
+    width: 95%;
+    color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-right: 1.5rem;
+}
+
+#recent-searches button {
+    width: 100%;
+    line-height: 2rem;
+    margin: .5em;
+    
 }
