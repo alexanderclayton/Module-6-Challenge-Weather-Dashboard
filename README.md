@@ -43,12 +43,12 @@ The acceptance criteria for this project are as follows:
 
 Full Size desktop view
 
-![full size desktop view]()
+![full size desktop view](./assets/images/alexclaytonbootcamp.github.io_Module-6-Challenge-Weather-Dashboard_.png)
 
 
 ## URL of the Deployed Application:
 
-[Deployed Application]()
+[Deployed Application](https://alexclaytonbootcamp.github.io/Module-6-Challenge-Weather-Dashboard/)
 
 ## Resources
 
