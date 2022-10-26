@@ -25,7 +25,7 @@ var fiveDayPull = document.getElementById("5-day-pull");
 //pass city name instead of cityInput.value
 
 function testFunction() {
-    var cityCoordinatesURL = ('http://api.openweathermap.org/geo/1.0/direct?q=' + cityInput.value + '&limit=5&appid=aa5a9bd886dab3a65130eaa89476e34e')
+    var cityCoordinatesURL = ('https://api.openweathermap.org/geo/1.0/direct?q=' + cityInput.value + '&limit=5&appid=aa5a9bd886dab3a65130eaa89476e34e')
    
    console.log(cityCoordinatesURL)
     fetch(cityCoordinatesURL)
